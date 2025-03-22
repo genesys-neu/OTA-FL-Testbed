@@ -1,0 +1,28 @@
+id: OTA_FL_filter_payload_py
+label: filter_payload_py
+category: '[OTA_FL]'
+
+parameters:
+-   id: tag_name
+    label: Name of the tag
+    dtype: string
+
+inputs:
+-   domain: stream
+    dtype: complex
+
+outputs:
+-   domain: stream
+    dtype: complex
+
+templates:
+    imports: from gnuradio import OTA_FL
+    make: OTA_FL.filter_payload_py(${tag_name})
+
+file_format: 1
+
+templates:
+  imports: from gnuradio import OTA_FL
+  make: OTA_FL.filter_payload_py()
+
+file_format: 1
