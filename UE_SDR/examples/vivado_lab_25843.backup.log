@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado Lab Edition v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# 
+# 
+# Start of session at: Tue Oct 15 11:59:20 2024
+# Process ID: 25843
+# Current directory: /home/genesys/Demo/Suyash_OTA_FL/gr-OTA_FL/examples
+# Command line: vivado_lab
+# Log file: /home/genesys/Demo/Suyash_OTA_FL/gr-OTA_FL/examples/vivado_lab.log
+# Journal file: /home/genesys/Demo/Suyash_OTA_FL/gr-OTA_FL/examples/vivado_lab.jou
+# Running On        :genesys-lap2
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 20.04.6 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz
+# CPU Frequency     :920.481 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :16554 MB
+# Swap memory       :16963 MB
+# Total Virtual     :33518 MB
+# Available Virtual :30549 MB
+#-----------------------------------------------------------
+start_gui
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.1
+  **** Build date : May 22 2024 at 19:19:01
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Apr 26 2024-21:40:49
+    **** Build number : 2024.1.1714182049
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Apr 26 2024-21:40:49
+    **** Build number : 2024.1.1714182049
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+refresh_hw_server {localhost:3121}
+WARNING: [Labtoolstcl 44-27] No hardware targets exist on the server [localhost:3121]
+Check to make sure the cable targets connected to this machine are properly connected
+and powered up, then use the refresh_hw_server command to re-register the hardware targets.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.1.0
+  ****** Build date   : Apr 26 2024-21:40:49
+    **** Build number : 2024.1.1714182049
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/2516351A76C2A
+current_hw_device [get_hw_devices xc7k410t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k410t_0] 0]
+INFO: [Labtools 27-1435] Device xc7k410t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7k410t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k410t_0]
+set_property PROGRAM.FILE {/usr/local/share/uhd/images/usrp_x310_fpga_HG.bit} [get_hw_devices xc7k410t_0]
+program_hw_devices [get_hw_devices xc7k410t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7100.059 ; gain = 0.000 ; free physical = 4286 ; free virtual = 28447
+refresh_hw_device [lindex [get_hw_devices xc7k410t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k410t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting vivado_lab at Tue Oct 15 12:01:26 2024...

@@ -1,0 +1,71 @@
+id: OTA_FL_correlate_and_tag_py
+label: correlate_and_tag_py
+category: '[OTA_FL]'
+
+templates:
+  imports: from gnuradio import OTA_FL
+  make: OTA_FL.correlate_and_tag_py(${seq_len}, ${frame_len}, ${num_Tx}, ${file_path},${cor_method}, ${feedback_type})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#     * default
+
+parameters:
+- id: seq_len
+  label: Length of Gold Seq.
+  dtype: int
+  default: '16456'
+- id: frame_len
+  label: Length of Frame
+  dtype: int
+  default: '32000'
+- id: num_Tx
+  label: Number of Active Tx
+  dtype: int
+  default: '4'
+- id: file_path
+  label: Payload Files
+  dtype: string
+  default: '"Enter folder path"'
+- id: cor_method
+  label: Correlation Method
+  dtype: int
+  options: ['0', '1']
+  option_labels: [default, fft]
+- id: feedback_type
+  label: Feedback Type
+  dtype: int
+  options: ['0', '1']
+  option_labels: [CSI, Waterfilling Beamweight]
+
+#  Make one 'inputs' list entry per input and one 'outputs' list entry per output.
+#  Keys include:
+#      * label (an identifier for the GUI)
+#      * domain (optional - stream or message. Default is stream)
+#      * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#      * vlen (optional - data stream vector length. Default is 1)
+#      * optional (optional - set to 1 for optional inputs. Default is 0)
+inputs:
+- label: payload
+  domain: stream
+  dtype: complex
+
+outputs:
+- label: sync_frame
+  domain: stream
+  dtype: complex
+- label: corr_out
+  domain: stream
+  dtype: complex
+#- label: ...
+#  domain: ...
+#  dtype: ...
+#  vlen: ...
+#  optional: ...
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1
