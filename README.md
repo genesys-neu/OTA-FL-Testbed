@@ -54,6 +54,10 @@ OTA-FL enables **analog aggregation of model updates directly over the air** usi
 ## 📖 Citation
 If you use this repository in your research, please cite:
 
-S. Pradhan, A. Koc, K. Alemdar, M. Arfaoui, P. Pietraski, F. Periard, G. Zhang, M. Hudon, K. R. Chowdhury,  
+[1] S. Pradhan, A. Koc, D. Muruganandham, M. Arfaoui, P. Pietraski, G. Zhang, J. Kaewell, K. R. Chowdhury, 
+**"Deploying Over-the-air Federated Learning in Real-world Multi-antenna Systems’"**,
+IEEE Conference on Computer Communications (INFOCOM), accepted, May 2026.
+
+[2] S. Pradhan, A. Koc, K. Alemdar, M. Arfaoui, P. Pietraski, F. Periard, G. Zhang, M. Hudon, K. R. Chowdhury,  
 **"Experimental Demonstration of Over the Air Federated Learning for Cellular Networks"**,  
 accepted, *IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)*, 2025.
