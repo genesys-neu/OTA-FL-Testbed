@@ -11,11 +11,10 @@ OTA-FL enables **analog aggregation of model updates directly over the air** usi
 - Export local model weights as binary (`.bin`) files  
 - Transmission of weights via **GNU Radio 3.10 + UHD ≥ 4.3**  
 - OFDM waveform generation with adaptive precoding  
-- Wireless aggregation of model updates  
+- OTA aggregation of model updates  
 - **Frame synchronization** using Zadoff-Chu sequences  
-- **DMRS pilot-based channel estimation**  
-- Global model reconstruction and redistribution  
-- Iterative training until convergence  
+- **DMRS pilot-based channel estimation**    
+- Iterative training within a ML framework and OTA combining within SDR framework until convergence  
 
 ---
 
@@ -45,7 +44,7 @@ OTA-FL enables **analog aggregation of model updates directly over the air** usi
    Feed global weights back into TensorFlow (or other ML frameworks) and distribute to clients.  
 
 6. **Iteration**  
-   Repeat until the global model converges.  
+   Repeat steps 1 to 5 until the global model converges.  
 
 ---
 
