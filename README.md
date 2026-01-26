@@ -25,7 +25,8 @@ OTA-FL enables **analog aggregation of model updates directly over the air** usi
 - **TensorFlow**: 2.15 (default; works with other ML frameworks)  
 - NI USRP hardware (tested with X310, B210, etc.)  
 
-**Link to install dependencies : **  We suggest installing the dependencies "From Source" to ensure a stable environment using the instructions within this link https://wiki.gnuradio.org/index.php/LinuxInstall.
+**Link to install dependencies :**  We suggest installing the dependencies "From Source" to ensure a stable environment using the instructions within this link https://wiki.gnuradio.org/index.php/LinuxInstall.
+
 ---
 
 ## Workflow
