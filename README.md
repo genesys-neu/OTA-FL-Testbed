@@ -60,6 +60,7 @@ Run the UE transmission script:
 ```bash
 cd examples
 python3 OFDM_UE2.py (You will need to manually configure the paths for weights of each client based on client id)
+```
 
 Synchronization:
 
