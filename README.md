@@ -74,6 +74,7 @@ Run the gNB receiver and OTA aggregation:
 ```bash
 cd examples
 python3 OFDM_Custom_Rx.py
+```
 
 The OTA combined model weights will be extracted from the OFDM waveform and stored in data folder. This can be sent to your ML framework to insert in global model and deliver back to local models for continuing FL training.
 
