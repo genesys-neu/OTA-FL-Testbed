@@ -104,8 +104,8 @@ class Precoder(gr.sync_block):
         in0 = input_items[0]
         out = output_items[0]
         # <+signal processing here+>
-        #out[:] = in0 * self.precoder
-        out[:] = in0
+        out[:] = in0 * self.precoder
+        # out[:] = in0
         #print("PF =", in0 / out[:])
         
         return len(output_items[0])
