@@ -62,12 +62,20 @@ cd examples
 python3 OFDM_UE2.py (You will need to manually configure the paths for weights of each client based on client id)
 ```
 
-Synchronization:
+**Synchronization:**
 
-Same host / same clock: OctoClock
+- If using same hosts for different SDR clients, synchronize the SDRs with NI OctoClock or similar unified clock source
 
-Different hosts: PTP (linuxptp)
-https://github.com/richardcochran/linuxptp
+- If different clients are controlled via different host computers, we will need additional synchronization at compute-level using PTP (linuxptp : https://github.com/richardcochran/linuxptp)
+
+### gNB / Server (Receive)
+
+Run the gNB receiver and OTA aggregation:
+```bash
+cd examples
+python3 OFDM_Custom_Rx.py
+
+The OTA combined model weights will be extracted from the OFDM waveform and stored in data folder. This can be sent to your ML framework to insert in global model and deliver back to local models for continuing FL training.
 
 ---
 
