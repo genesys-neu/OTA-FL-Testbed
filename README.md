@@ -54,7 +54,7 @@ OTA-FL enables **analog aggregation of model updates directly over the air** usi
 
 ### UE / Client (Transmit)
 
-Local model weights must be stored as binary files in data folder : data/client_<id>_weights.bin
+Local model weights must be stored as binary files in data folder : data/weights_<client_id>.bin
 
 Run the UE transmission script:
 ```bash
