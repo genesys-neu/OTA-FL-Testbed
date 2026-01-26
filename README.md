@@ -46,9 +46,27 @@ OTA-FL enables **analog aggregation of model updates directly over the air** usi
    Feed global weights back into TensorFlow (or other ML frameworks) and distribute to clients.  
 
 6. **Iteration**  
-   Repeat steps 1 to 5 until the global model converges.  
-
+   Repeat steps 1 to 5 until the global model converges.
+   
 ---
+
+## Running OTA-FL Framework
+
+### UE / Client (Transmit)
+
+Local model weights must be stored as binary files in data folder : data/client_<id>_weights.bin
+
+Run the UE transmission script:
+```bash
+cd examples
+python3 OFDM_UE2.py (You will need to manually configure the paths for weights of each client based on client id)
+
+Synchronization:
+
+Same host / same clock: OctoClock
+
+Different hosts: PTP (linuxptp)
+https://github.com/richardcochran/linuxptp
 
 ---
 
